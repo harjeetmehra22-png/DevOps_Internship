@@ -1,0 +1,24 @@
+===== System Report =====
+Hostname: harjeet
+User: harjeet
+Date: Mon Aug 18 16:22:42 UTC 2025
+Uptime: up 10 hours, 4 minutes
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.9G     0  1.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            1.9G  4.0K  1.9G   1% /mnt/wsl
+drivers         183G  113G   71G  62% /usr/lib/wsl/drivers
+/dev/sdd       1007G  1.8G  954G   1% /
+none            1.9G  152K  1.9G   1% /mnt/wslg
+none            1.9G     0  1.9G   0% /usr/lib/wsl/lib
+rootfs          1.9G  2.7M  1.9G   1% /init
+none            1.9G  552K  1.9G   1% /run
+none            1.9G     0  1.9G   0% /run/lock
+none            1.9G     0  1.9G   0% /run/shm
+none            1.9G   76K  1.9G   1% /mnt/wslg/versions.txt
+none            1.9G   76K  1.9G   1% /mnt/wslg/doc
+C:\             183G  113G   71G  62% /mnt/c
+D:\             147G   58G   89G  40% /mnt/d
+F:\             147G  109G   39G  74% /mnt/f
+tmpfs           1.9G   16K  1.9G   1% /run/user/1000
+tmpfs           1.9G   16K  1.9G   1% /run/user/0
