@@ -1,4 +1,6 @@
+#!/bin/bash
 
+cat << 'EOF' > README.md
 # Task 01 - Git Basics
 
 ## 🎯 Objective
@@ -30,4 +32,4 @@ Understand Git fundamentals including staging, committing, branching, and pull r
 **Harjeet Mehra** – DevOps Intern at **BKN301**
 EOF
 
-echo "README.md created successfully ✅
+echo "README.md created successfully ✅"
