@@ -1,2 +1,2 @@
-#!/bin/bash
-git checkout -b feature-update
+"#!/bin/bash
+git checkout -b feature-update"
