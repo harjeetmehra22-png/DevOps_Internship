@@ -1,4 +1,4 @@
-# AWS EC2 Practicals – Week 2
+# AWS EC2 Practicals – Week 2 (Day-3)
 
 ## Overview
 This module provides hands-on experience with Amazon EC2, focusing on instance creation, basic server setup, and lifecycle management. It’s designed to help interns understand the practical aspects of cloud infrastructure using Ubuntu-based EC2 instances.
