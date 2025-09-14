@@ -1,0 +1,31 @@
+📅 Weekend Work - Week 2
+
+This weekend, I revised the following topics:
+
+1. 🌩️ Cloud Fundamentals
+   - Basics of Cloud Computing
+   - Cloud service models (IaaS, PaaS, SaaS)
+   - Deployment models (Public, Private, Hybrid)
+
+2. ☁️ AWS Fundamentals
+   - Core AWS services overview
+   - IAM basics
+   - AWS global infrastructure (Regions, AZs)
+
+3. 🖥️ Amazon EC2
+   - Steps to launch an EC2 instance
+   - Connecting to EC2 using SSH
+   - Basic instance management
+
+4. 🐧 Linux Revision
+   - Basic commands (file system navigation, permissions, processes)
+   - Package management
+   - System information commands
+
+5. 🔧 Git & GitHub Revision
+   - Git basics (init, add, commit, log, status)
+   - Working with remote repositories
+   - Push & pull operations on GitHub
+   - Branching basics
+
+✅ Overall, this weekend helped me strengthen my understanding of Cloud, AWS, EC2, Linux, and Git/GitHub.
