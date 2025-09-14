@@ -1,83 +1,39 @@
+
 # AWS Practical Lab (Free Tier)
 
-⚠️ Use **t2.micro Free Tier**. Always **STOP instances** after each session to avoid charges.  
-Take screenshots at **checkpoints**.
+## Overview
+Hands-on lab using AWS Free Tier to explore EC2, S3, IAM, VPC, Subnets, and Web Servers.
 
----
+## Part 1 — VPC & Subnets
+- Create VPC: `interns-lab-vpc` (CIDR: 10.0.0.0/16)
+- Subnets:
+  - Public: `public-subnet-a` (10.0.1.0/24, public IP ON)
+  - Private: `private-subnet-a` (10.0.2.0/24, public IP OFF)
+- Internet Gateway + Route Tables:
+  - `public-rt`: 0.0.0.0/0 → IGW
+  - `private-rt`: local only
 
-## Lab Tasks Overview
+## Part 2 — Security Groups
+- `nginx-sg`: SSH (22) My IP, HTTP (80) All
+- `apache-sg`: HTTP (80) from `nginx-sg`
 
-### 1. VPC & Subnets
-- Create VPC: `interns-lab-vpc` (CIDR: `10.0.0.0/16`)
-- Public Subnet: `10.0.1.0/24` (auto-assign public IP **ON**)
-- Private Subnet: `10.0.2.0/24` (auto-assign **OFF**)
-- Attach Internet Gateway and configure route tables
-- ✅ **Checkpoint:** Screenshot subnet-to-route-table associations
-
----
-
-### 2. Security Groups
-- **nginx-sg**: SSH (22) from My IP, HTTP (80) from all
-- **apache-sg**: HTTP (80) only from `nginx-sg`
-
----
-
-### 3. EC2 Instances & Web Servers
-- Launch **nginx-server** in public subnet → install Nginx
-- Launch **apache-server** in public subnet → install Apache
+## Part 3 — EC2 & Web Servers
+- Launch `nginx-server` in public subnet, install Nginx
+- Launch `apache-server` in public subnet, install Apache
 - Test Apache from Nginx using `curl`
-- ℹ️ **Note:** Apache stays in public subnet (NAT Gateway not Free Tier)
 
----
+## Part 4 — Nginx Reverse Proxy
+- Configure Nginx to proxy to Apache private IP
+- Reload Nginx and verify via browser
 
-### 4. Nginx Reverse Proxy
-- Configure Nginx to **proxy requests** to Apache
-- Replace default config with custom proxy setup
-- ✅ **Checkpoint:** Browser access to Nginx shows Apache page
-
----
-
-### 5. S3 + IAM Role
-- Create S3 bucket: `interns-lab-bucket-<name>` with versioning
+## Part 5 — S3 + IAM Role
+- Create bucket `interns-lab-bucket-<name>`, enable versioning
 - Upload `about.txt`, `logo.png`
-- Create IAM Role: `ec2-s3-readonly` with custom policy
-- Attach role to **nginx-server**
-- Test access via AWS CLI
-- ✅ **Checkpoint:** Apache serves `about.txt` from S3
+- Create IAM Role `ec2-s3-readonly` with custom policy
+- Attach role to Nginx server, install AWS CLI, test access
 
----
-
-## Learning Outcomes
-
-**Task 1: VPC & Subnets**  
-- CIDR planning  
-- Public vs private subnet behavior  
-- Route table configuration  
-
-**Task 2: Security Groups**  
-- Instance-level access control  
-- Inter-SG communication  
-
-**Task 3: EC2 & Web Servers**  
-- EC2 provisioning  
-- Package installation  
-- Intra-VPC connectivity  
-
-**Task 4: Reverse Proxy**  
-- Nginx configuration  
-- Proxying internal services  
-- Config validation  
-
-**Task 5: S3 + IAM Role**  
-- IAM role attachment  
-- Least privilege access  
-- CLI-based S3 interaction  
-
----
-
-## Cleanup Checklist
-- Stop EC2 instances after each session  
-- Terminate EC2 when done  
-- Delete S3 bucket and objects  
-- Detach and delete unused IAM roles  
-- Remove VPC if no longer needed  
+## Cleanup
+- Stop/terminate EC2 instances
+- Delete S3 bucket and objects
+- Detach/delete IAM role
+- Delete VPC if not needed
