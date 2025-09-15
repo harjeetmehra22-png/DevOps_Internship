@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: intern
+      POSTGRES_PASSWORD: internpass
+      POSTGRES_DB: intern_db
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:latest
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+volumes:
+  dbdata:
+

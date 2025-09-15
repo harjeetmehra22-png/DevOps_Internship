@@ -1,0 +1,5 @@
+docker run -d \
+  --name my-nginx \
+  -p 8080:80 \
+  -v $(pwd) /practical-static-nginx :/usr/share/nginx/html: \
+  nginx
